@@ -3,7 +3,7 @@
   <style>
      body{
          text-align: center;
-         background-image: linear-gradient(rgb(13, 175, 177), rgb(222, 222, 222));
+         background-image: linear-gradient(rgb(255, 99, 71),rgb(255, 99, 71, 0.5));
          min-width: 100%;
          min-height: 100%;
       }
@@ -11,7 +11,7 @@
 </head>
 
 <body>
-<h1>My Website</h1>
+<h1 style="font-size:60px;">My Websit</h1>
 
 
 
