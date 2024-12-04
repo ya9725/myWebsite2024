@@ -73,10 +73,56 @@
     html {
       scroll-behavior: smooth;
     }
+      /* Style the button */
+        #scrollToTopBtn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+            display: none; /* Hidden by default */
+        }
+
+        /* Add a hover effect */
+        #scrollToTopBtn:hover {
+            background-color: #45a049;
+        }
   </style>
 </head>
 <body>
 
+    <div style="height: 1500px;"> <!-- Just to make the page scrollable -->
+        <h1>Scroll Down and Click the Button to Go Back to Top</h1>
+        <p>Content goes here...</p>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTopBtn" onclick="scrollToTop()">Top</button>
+
+    <script>
+        // Get the button
+        var mybutton = document.getElementById("scrollToTopBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        };
+
+        // When the user clicks on the button, scroll to the top of the document
+        function scrollToTop() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
+      {/script}
   <!-- Navbar -->
   <div class="navbar">
     <a href="#home" class="active">Home</a>
